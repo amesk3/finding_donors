@@ -15076,59 +15076,71 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <p><strong>Answer: </strong></p>
 <p>Decision Trees</p>
 <ul>
-<li>Describe one real-world application in industry where the model can be applied. 
-We can apply this to create an app recommendation model based on someone's gender or occupation.</li>
-<li>What are the strengths of the model; when does it perform well?
-The strengths of the model are that there is less effort to be put into pre-processing work, does not require normalization or scaling, and that missing values do not affect the building process.</li>
+<li>Describe one real-world application in industry where the model can be applied. <ul>
+<li>We can apply this to create an app recommendation model based on someone's gender or occupation.</li>
 </ul>
-<p>It performs well when the data has labeled, defined inputs, and when we are not worried about the accuracy of future datasets, and when our goal is explanatory analysis.</p>
-<p>(ref: <a href="https://www.kaggle.com/learn-forum/60582">https://www.kaggle.com/learn-forum/60582</a>, (<a href="https://dhirajkumarblog.medium.com/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a">https://dhirajkumarblog.medium.com/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a</a>))</p>
+</li>
+<li><p>What are the strengths of the model; when does it perform well?</p>
 <ul>
-<li>What are the weaknesses of the model; when does it perform poorly?
-Some weaknesses of decision tree are that a small change in data can cause a large change in the structure compared to other algorithms, some calculations can get more complex than other algorithms, it often involves more time to train the model, and you can't have two separate explanatory variables that behave independently (in other words, every variable in the tree has to interact iwth every variable further up the tree)</li>
+<li>The strengths of the model are that there is less effort to be put into pre-processing work, does not require normalization or scaling, and that missing values do not affect the building process. It performs well when the data has labeled, defined inputs, and when we are not worried about the accuracy of future datasets, and when our goal is explanatory analysis.(ref: <a href="https://www.kaggle.com/learn-forum/6058">https://www.kaggle.com/learn-forum/6058</a>), <a href="https://dhirajkumarblog.medium.com/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a">https://dhirajkumarblog.medium.com/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a</a>)</li>
 </ul>
-<p>The model performs poorly for continuous variables and is limited to classification modeling.</p>
-<p>(ref:<a href="https://dhirajkumarblog.medium.com/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a">https://dhirajkumarblog.medium.com/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a</a>, <a href="https://stats.stackexchange.com/questions/1292/what-is-the-weak-side-of-decision-trees">https://stats.stackexchange.com/questions/1292/what-is-the-weak-side-of-decision-trees</a> )</p>
+</li>
+<li><p>What are the weaknesses of the model; when does it perform poorly?</p>
 <ul>
-<li>What makes this model a good candidate for the problem, given what you know about the data?
-Decision tree is a supervised algorithm, and since we have a dataset that has the defined features and labeled outcome, we know to use a supervised model. We have a classification task at hand (greater or less than 50K?), so it makes sense to use a classification model. Further, through pre-processing our data using hot-encoding, we have made our data binary, which allows for splits during our decisioning.</li>
+<li>Some weaknesses of decision tree are that a small change in data can cause a large change in the structure compared to other algorithms, some calculations can get more complex than other algorithms, it often involves more time to train the model, and you can't have two separate explanatory variables that behave independently (in other words, every variable in the tree has to interact iwth every variable further up the tree). The model performs poorly for continuous variables and is limited to classification modeling.(ref:<a href="https://dhirajkumarblog.medium.com/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a">https://dhirajkumarblog.medium.com/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a</a>, <a href="https://stats.stackexchange.com/questions/1292/what-is-the-weak-side-of-decision-trees">https://stats.stackexchange.com/questions/1292/what-is-the-weak-side-of-decision-trees</a> )</li>
+</ul>
+</li>
+<li><p>What makes this model a good candidate for the problem, given what you know about the data?</p>
+<ul>
+<li>Decision tree is a supervised algorithm, and since we have a dataset that has the defined features and labeled outcome, we know to use a supervised model. We have a classification task at hand (greater or less than 50K?), so it makes sense to use a classification model. Further, through pre-processing our data using hot-encoding, we have made our data binary, which allows for splits during our decisioning.</li>
+</ul>
+</li>
 </ul>
 <p>Ensemble Methods (specifically Random Forest)</p>
 <ul>
-<li><p>Describe one real-world application in industry where the model can be applied. 
-In the lectures, there is an example of taking different groupings of features to predict via decision trees, then voting for the most likely prediction for the app prediction question explained above.</p>
+<li><p>Describe one real-world application in industry where the model can be applied.</p>
+<ul>
+<li>In the lectures, there is an example of taking different groupings of features to predict via decision trees, then voting for the most likely prediction for the app prediction question explained above.</li>
+</ul>
 </li>
-<li><p>What are the strengths of the model; when does it perform well?
-In the lectures, there is an example of taking different groupings of features to predict via decision trees, then voting for the most likely prediction for the app prediction question explained above.
-(ref: <a href="https://dhirajkumarblog.medium.com/random-forest-algorithm-advantages-and-disadvantages-1ed22650c84f">https://dhirajkumarblog.medium.com/random-forest-algorithm-advantages-and-disadvantages-1ed22650c84f</a>)</p>
+<li><p>What are the strengths of the model; when does it perform well?</p>
+<ul>
+<li>In the lectures, there is an example of taking different groupings of features to predict via decision trees, then voting for the most likely prediction for the app prediction question explained above. (ref: <a href="https://dhirajkumarblog.medium.com/random-forest-algorithm-advantages-and-disadvantages-1ed22650c84f">https://dhirajkumarblog.medium.com/random-forest-algorithm-advantages-and-disadvantages-1ed22650c84f</a>)</li>
+</ul>
 </li>
-<li><p>What are the weaknesses of the model; when does it perform poorly?
-The weakness of Random Forest is like decision trees, the result may change considerably from a small change in the data and computations are more complex than other algorithms</p>
+<li><p>What are the weaknesses of the model; when does it perform poorly?</p>
+<ul>
+<li>The weakness of Random Forest is like decision trees, the result may change considerably from a small change in the data and computations are more complex than other algorithms</li>
+</ul>
 </li>
-<li><p>What makes this model a good candidate for the problem, given what you know about the data?
-Since we have multiple features (high dimensionality) and is a classification problem (whether if the income is under or over 50K) this model would be a good candidate for the problem.</p>
+<li><p>What makes this model a good candidate for the problem, given what you know about the data?</p>
+<ul>
+<li>Since we have multiple features (high dimensionality) and is a classification problem (whether if the income is under or over 50K) this model would be a good candidate for the problem.</li>
+</ul>
 </li>
 </ul>
 <p>Support Vector Machines</p>
 <ul>
-<li><p>Describe one real-world application in industry where the model can be applied. 
-Face detection between a human face and non human face.</p>
-</li>
-<li><p>What are the strengths of the model; when does it perform well?
-Support Vector Machines' strengths are that they work relatively well when there is a clear demarcation of separation between classes, are effective for cases when the number of dimensions is greater than the number of samples, and finally, is that they are memory efficient</p>
-</li>
-</ul>
-<p>As said above, it performs well for high dimensional spaces.
-(ref:<a href="https://dhirajkumarblog.medium.com/top-4-advantages-and-disadvantages-of-support-vector-machine-or-svm-a3c06a2b107">https://dhirajkumarblog.medium.com/top-4-advantages-and-disadvantages-of-support-vector-machine-or-svm-a3c06a2b107</a>)</p>
+<li><p>Describe one real-world application in industry where the model can be applied.</p>
 <ul>
-<li>What are the weaknesses of the model; when does it perform poorly?
-The weakness of SVM is that there is no probabilistic explanation for classification on data points being above and below the classifying hyperplane.</li>
+<li>Face detection between a human face and non human face.</li>
 </ul>
-<p>SVM is not fit for large datasets and does not perform well when the data point has more noise (when the target classes are overlapping)
-(ref: same as advantages)</p>
+</li>
+<li><p>What are the strengths of the model; when does it perform well?</p>
 <ul>
-<li>What makes this model a good candidate for the problem, given what you know about the data?
-SVM is good candidate for this problem as it deals with classification and is relatively efficient. However, it also may not be a good candidate since we have a relatively large dataset.</li>
+<li>Support Vector Machines' strengths are that they work relatively well when there is a clear demarcation of separation between classes, are effective for cases when the number of dimensions is greater than the number of samples, and finally, is that they are memory efficient. As said above, it performs well for high dimensional spaces. (ref:<a href="https://dhirajkumarblog.medium.com/top-4-advantages-and-disadvantages-of-support-vector-machine-or-svm-a3c06a2b107">https://dhirajkumarblog.medium.com/top-4-advantages-and-disadvantages-of-support-vector-machine-or-svm-a3c06a2b107</a>)</li>
+</ul>
+</li>
+<li><p>What are the weaknesses of the model; when does it perform poorly?</p>
+<ul>
+<li>The weakness of SVM is that there is no probabilistic explanation for classification on data points being above and below the classifying hyperplane.SVM is not fit for large datasets and does not perform well when the data point has more noise (when the target classes are overlapping).(ref: same as advantages)</li>
+</ul>
+</li>
+<li><p>What makes this model a good candidate for the problem, given what you know about the data?</p>
+<ul>
+<li>SVM is good candidate for this problem as it deals with classification and is relatively efficient. However, it also may not be a good candidate since we have a relatively large dataset.</li>
+</ul>
+</li>
 </ul>
 
 </div>
