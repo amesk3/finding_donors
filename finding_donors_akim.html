@@ -15079,41 +15079,56 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <li>Describe one real-world application in industry where the model can be applied. 
 We can apply this to create an app recommendation model based on someone's gender or occupation.</li>
 <li>What are the strengths of the model; when does it perform well?
-The strengths of the model are 1) comparatively, the decision tree requires less effort for data preparation/pre-processing, 2) does not require normalization of data or scaling, and 3) missing values do not affect the process of building a decision tree. It performs well when the data has well defined inputs, when we are not worried about accuracy of future datasets and our goal is explanatory analysis
-(ref: <a href="https://www.kaggle.com/learn-forum/60582">https://www.kaggle.com/learn-forum/60582</a>, <a href="https://dhirajkumarblog.medium.com/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a">https://dhirajkumarblog.medium.com/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a</a>)</li>
+The strengths of the model are that there is less effort to be put into pre-processing work, does not require normalization or scaling, and that missing values do not affect the building process.</li>
+</ul>
+<p>It performs well when the data has labeled, defined inputs, and when we are not worried about the accuracy of future datasets, and when our goal is explanatory analysis.</p>
+<p>(ref: <a href="https://www.kaggle.com/learn-forum/60582">https://www.kaggle.com/learn-forum/60582</a>, (<a href="https://dhirajkumarblog.medium.com/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a">https://dhirajkumarblog.medium.com/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a</a>))</p>
+<ul>
 <li>What are the weaknesses of the model; when does it perform poorly?
-Some of the weaknesses are 1) a small change in the data can cause alarge change in the sturcture of the tree causing instability, 2) calculation can sometimes go far more complex compared to other algorithms, 3) often involves higher time to train the model, 4) is relatively expensive as the complexity and time has taken are more, and 5) you can't have two explanatory variables that behave independently. Every variable in the tree is forced to interact with every variable further up the tree. 
-The model performs poorly for continuous variables and is practically limited to classification.
-(ref: <a href="https://dhirajkumarblog.medium.com/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a">https://dhirajkumarblog.medium.com/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a</a>, <a href="https://stats.stackexchange.com/questions/1292/what-is-the-weak-side-of-decision-trees">https://stats.stackexchange.com/questions/1292/what-is-the-weak-side-of-decision-trees</a>, )</li>
+Some weaknesses of decision tree are that a small change in data can cause a large change in the structure compared to other algorithms, some calculations can get more complex than other algorithms, it often involves more time to train the model, and you can't have two separate explanatory variables that behave independently (in other words, every variable in the tree has to interact iwth every variable further up the tree)</li>
+</ul>
+<p>The model performs poorly for continuous variables and is limited to classification modeling.</p>
+<p>(ref:<a href="https://dhirajkumarblog.medium.com/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a">https://dhirajkumarblog.medium.com/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a</a>, <a href="https://stats.stackexchange.com/questions/1292/what-is-the-weak-side-of-decision-trees">https://stats.stackexchange.com/questions/1292/what-is-the-weak-side-of-decision-trees</a> )</p>
+<ul>
 <li>What makes this model a good candidate for the problem, given what you know about the data?
 Decision tree is a supervised algorithm, and since we have a dataset that has the defined features and labeled outcome, we know to use a supervised model. We have a classification task at hand (greater or less than 50K?), so it makes sense to use a classification model. Further, through pre-processing our data using hot-encoding, we have made our data binary, which allows for splits during our decisioning.</li>
 </ul>
 <p>Ensemble Methods (specifically Random Forest)</p>
 <ul>
-<li>Describe one real-world application in industry where the model can be applied. 
-In the lectures, there is an example of taking different groupings of features to predict via decision trees, then voting for the most likely prediction for the app prediction question explained above.</li>
-<li>What are the strengths of the model; when does it perform well?
-The strengths are that 1) you can use it for both regression and classification (is versatile), 2)prevents overfitting (compared to just decision tree), 3)can handle high dimensionality
-(ref: <a href="https://dhirajkumarblog.medium.com/random-forest-algorithm-advantages-and-disadvantages-1ed22650c84f">https://dhirajkumarblog.medium.com/random-forest-algorithm-advantages-and-disadvantages-1ed22650c84f</a>)</li>
-<li>What are the weaknesses of the model; when does it perform poorly?
-Random Forest algorithm 1) may change considerably by a small change in the data, and 2)computations may go far more complex compared to other algorithms.</li>
-<li>What makes this model a good candidate for the problem, given what you know about the data?
-We have multiple features and a classification problem.</li>
+<li><p>Describe one real-world application in industry where the model can be applied. 
+In the lectures, there is an example of taking different groupings of features to predict via decision trees, then voting for the most likely prediction for the app prediction question explained above.</p>
+</li>
+<li><p>What are the strengths of the model; when does it perform well?
+In the lectures, there is an example of taking different groupings of features to predict via decision trees, then voting for the most likely prediction for the app prediction question explained above.
+(ref: <a href="https://dhirajkumarblog.medium.com/random-forest-algorithm-advantages-and-disadvantages-1ed22650c84f">https://dhirajkumarblog.medium.com/random-forest-algorithm-advantages-and-disadvantages-1ed22650c84f</a>)</p>
+</li>
+<li><p>What are the weaknesses of the model; when does it perform poorly?
+The weakness of Random Forest is like decision trees, the result may change considerably from a small change in the data and computations are more complex than other algorithms</p>
+</li>
+<li><p>What makes this model a good candidate for the problem, given what you know about the data?
+Since we have multiple features (high dimensionality) and is a classification problem (whether if the income is under or over 50K) this model would be a good candidate for the problem.</p>
+</li>
 </ul>
 <p>Support Vector Machines</p>
 <ul>
-<li>Describe one real-world application in industry where the model can be applied. 
-Face detection between face and non face.</li>
-<li>What are the strengths of the model; when does it perform well?
-SVM's strengths are that 1) they work relatively well when there is a clear margin of separation between classes, 2)effective in cases where the number of dimensions is greater than the number of samples, and 3) memory efficient.
-It performs more effectively in high dimensional spaces.
-(ref:<a href="https://dhirajkumarblog.medium.com/top-4-advantages-and-disadvantages-of-support-vector-machine-or-svm-a3c06a2b107">https://dhirajkumarblog.medium.com/top-4-advantages-and-disadvantages-of-support-vector-machine-or-svm-a3c06a2b107</a>)</li>
+<li><p>Describe one real-world application in industry where the model can be applied. 
+Face detection between a human face and non human face.</p>
+</li>
+<li><p>What are the strengths of the model; when does it perform well?
+Support Vector Machines' strengths are that they work relatively well when there is a clear demarcation of separation between classes, are effective for cases when the number of dimensions is greater than the number of samples, and finally, is that they are memory efficient</p>
+</li>
+</ul>
+<p>As said above, it performs well for high dimensional spaces.
+(ref:<a href="https://dhirajkumarblog.medium.com/top-4-advantages-and-disadvantages-of-support-vector-machine-or-svm-a3c06a2b107">https://dhirajkumarblog.medium.com/top-4-advantages-and-disadvantages-of-support-vector-machine-or-svm-a3c06a2b107</a>)</p>
+<ul>
 <li>What are the weaknesses of the model; when does it perform poorly?
-SVM's weakness is that there is no probabilistic explanation for classification for data points above and below the classifying hyperplane.
-SVM is not suitable for large datasets and does not perform well when the data point has more noise i.e. target classes are overlapping
-(ref: same as advantages)</li>
+The weakness of SVM is that there is no probabilistic explanation for classification on data points being above and below the classifying hyperplane.</li>
+</ul>
+<p>SVM is not fit for large datasets and does not perform well when the data point has more noise (when the target classes are overlapping)
+(ref: same as advantages)</p>
+<ul>
 <li>What makes this model a good candidate for the problem, given what you know about the data?
-SVM are great for classification problems and that is what we have at hand.</li>
+SVM is good candidate for this problem as it deals with classification and is relatively efficient. However, it also may not be a good candidate since we have a relatively large dataset.</li>
 </ul>
 
 </div>
@@ -15367,9 +15382,10 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>Answer: </strong></p>
-<p>Random Forest Classifier is an ensemble algorithm, which creates a set of decision trees from a randomly selected subset of the training set, which then aggregates the votes from different decision trees to decide the final class of the test object.</p>
-<p>(ref: m<a href="https://datacated.com/datacated-challenge/random-forest-classifier-in-layman-terms/#page-content">https://datacated.com/datacated-challenge/random-forest-classifier-in-layman-terms/#page-content</a>)</p>
-<p>For example, we would pick a few columns from our dataset, like 'sex, education_level, marital_status', and 'education_level, occupation, capital-gain' etc. Each of these models will tell give us a prediction, from the predictions, we vote for which is the most popular prediction.</p>
+<p>We are using Random Forest Classifier to determine whether someone is making above 50K or below. Random Forest Classifier is like being able to get help from multiple sources when taking an exam— the problem, for us, being the thing we are trying to predict, which is the above 50K or below question.</p>
+<p>To come up with those multiple sources that will help us answer the exam question, we create a set of decision trees from a randomly selected subset of the training set which is the data we are using to build the model. After that we tally up the choice most of these sources make, meaning we aggregate the votes from different decision trees (the sources) to conclude what should be the predicted correct answer to the question on our exam.</p>
+<p>Further, in creating these 'sources' we would pick a few columns from our dataset, like 'sex, education_level, marital_status', and 'education_level, occupation, capital-gain' etc. Each of these models will tell give us a prediction, from the predictions, we vote for which is the most popular prediction.</p>
+<p>(ref: Luis's lectures, <a href="https://datacated.com/datacated-challenge/random-forest-classifier-in-layman-terms/#page-content">https://datacated.com/datacated-challenge/random-forest-classifier-in-layman-terms/#page-content</a>, <a href="https://towardsdatascience.com/understanding-random-forest-58381e0602d2">https://towardsdatascience.com/understanding-random-forest-58381e0602d2</a>)</p>
 
 </div>
 </div>
